@@ -11,6 +11,7 @@ gcc -O3 AdjMI.c -lMIToolbox -lm -o AdjMI.exe
 3. You have to run the program as:
 
 ./AdjMI.exe <SNPs_InputFile> <Intervals_File> <Threshold>
+ 
 
  The SNPs_InputFile: The input file has to be formatted like the attached example. The first line should have a header for the chromosome (CHROM) and Position (POS). and then a number for each accession separate by commas. The second line will have the corresponding chromosome for the first SNP and the corresponding position, and then the nucleotide corresponding to each accession in the same order that is in the first line. This time NO commas. and so on. I know this format is not conventional but facilitates the reading of big files. You should be able to transform VCF files into this format using R (if your tables are not too big) or linux commands to transpose. Let me know if you need some help with this.
 
