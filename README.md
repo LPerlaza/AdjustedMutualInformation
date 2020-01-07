@@ -22,7 +22,9 @@ The Threshold is the minimum number of accession of the intersection you want to
 4. If you manage to do all previous steps you will have the output files which are named as:  inputfile_interval.start_interval.end.txt . Due to the large number of comparisons that are needed and splitting the processing into a number of cores you are going to have several output files that you can concatenate as you want, or process separately, as you prefer. The format is simple:
 
 EMI: Expected Mutual Information
+
 MI: Mutual Information
+
 AMI: Adjusted Mutual Information
 
 NMI: Normalised Mutual Information
