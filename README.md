@@ -3,7 +3,7 @@
 AdjMI.c is a program that calculates the AMI for each pair of SNP sites in an alignment. Takes two SNP sites from an alignment per time and calculates the Adjusted Mutual Information. It is optimised for sides that are biallelic (only two variations in each site). It has into account Ns, and uses only the intersection of the two sites that have no Ns. Only will have into account SNPs that have a minor allele frequency of 5%, thus SNP sites with really low variability will not be included. This program is also optimised to be run in parallel and use shared memory to read the input file. This two features will help you to improve the speed of your calculations and reduce the computational resources used for calculating AMI.
 
 ![AdjMI](https://github.com/LPerlaza/AdjustedMutualInformation/blob/master/AdjMI_updated.pdf)
-Format: ![Alt Text](url)
+
 1. Download and install the MI dependency from here: https://github.com/Craigacp/MIToolbox/
 
 2. C code has to be compiled. Please compile using this command:
