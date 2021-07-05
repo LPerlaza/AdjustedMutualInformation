@@ -4,9 +4,13 @@ AdjMI.c is a program that calculates the AMI for each pair of SNP sites in an al
 
  ![Adj MI](https://github.com/LPerlaza/AdjustedMutualInformation/blob/master/AdjMI_updated.pdf)
 
-1. Download and install the MI dependency from here: https://github.com/Craigacp/MIToolbox/
+### 1. Download and install 
 
-2. C code has to be compiled. Please compile using this command:
+Download and install the MI dependency from here: https://github.com/Craigacp/MIToolbox/
+
+github clone 
+
+### 2. C code has to be compiled. Please compile using this command:
 
 ```gcc -O3 AdjMI.c -lMIToolbox -lm -o AdjMI.exe```
 
