@@ -8,16 +8,16 @@ AdjMI.c is a program that calculates the AMI for each pair of SNP sites in an al
 
 Download and install the MI dependency from here: https://github.com/Craigacp/MIToolbox/
 
-github clone 
+github clone https://github.com/LPerlaza/AdjustedMutualInformation.git
 
 ### 2. C code has to be compiled. Please compile using this command:
 
 ```gcc -O3 AdjMI.c -lMIToolbox -lm -o AdjMI.exe```
-
-3. You have to run the program as:
+### 3. You have to run the program as:
 
 ```./AdjMI.exe <SNPs_InputFile> <Intervals_File> <Threshold>```
  
+### Input Files
 
 The *SNPs_InputFile*: The input file has to be formatted like the attached example (Example_inputFile.txt). The first line should have a header for the chromosome (CHROM) and Position (POS). and then a number for each accession separate by commas. The second line will have the corresponding chromosome for the first SNP and the corresponding position, and then the nucleotide corresponding to each accession in the same order that is in the first line. This time NO commas. and so on. I know this format is not conventional but facilitates the reading of big files. You should be able to transform VCF files into this format using R (if your tables are not too big) or linux commands to transpose. Let me know if you need some help with this.
 
@@ -25,8 +25,14 @@ The *intervals_File*:  The intervals-file is intended to guide AdjMI.exe to spre
 
 The *Threshold* is the minimum number of accession of the intersection you want to consider to have unambiguous variant calls per pairwise comparison. Imagen you have 1000 genomes in your alignment, when doing the intersection of the nonambiguous variants what is the minimun number the vector should be?.
 
-4. If you manage to do all previous steps you will have the output files which are named as:  inputfile_interval.start_interval.end.txt . Due to the large number of comparisons that are needed and splitting the processing into a number of cores you are going to have several output files that you can concatenate as you want, or process separately, as you prefer. The format is simple:
+### 4. Outputs
 
+If you manage to do all previous steps you will have the output files which are named as:  inputfile_interval.start_interval.end.txt . Due to the large number of comparisons that are needed and splitting the processing into a number of cores you are going to have several output files that you can concatenate as you want, or process separately, as you prefer. 
+
+
+The format of the output is simple:
+
+''' 
 EMI: Expected Mutual Information
 
 MI: Mutual Information
@@ -58,5 +64,5 @@ FreqB2: Frequency of the allele_2 in SNP_B
 Length: Length of the vectors intersection (both have NO Ns)
 
 AccCode: The order of the accessions numbers that were included in the AMI calculation
-
+'''
 
