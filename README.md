@@ -32,7 +32,7 @@ If you manage to do all previous steps you will have the output files which are 
 
 The format of the output is simple:
 
-`<addr>`
+```
 EMI: Expected Mutual Information
 
 MI: Mutual Information
@@ -64,5 +64,5 @@ FreqB2: Frequency of the allele_2 in SNP_B
 Length: Length of the vectors intersection (both have NO Ns)
 
 AccCode: The order of the accessions numbers that were included in the AMI calculation
-`<addr>`
+```
 
